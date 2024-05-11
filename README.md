@@ -1,4 +1,4 @@
-For the article of this repo, please refer to: https://www.swtestacademy.com/deploy-full-stack-application-in-kubernetes/
+
 
 ## INSTRUCTIONS
 
