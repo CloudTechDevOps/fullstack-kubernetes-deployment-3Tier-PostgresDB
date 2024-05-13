@@ -47,11 +47,11 @@ sudo mv /tmp/eksctl /usr/local/bin
 #---------------------------Helm install--------------------
 #https://github.com/helm/helm/releases
 
-wget https://get.helm.sh/helm-v3.14.0-linux-amd64.tar.gz
+wget https://get.helm.sh/helm-v3.6.0-linux-amd64.tar.gz
 
-tar -zxvf helm-v3.14.0-linux-amd64.tar.gz
+tar -zxvf helm-v3.6.0-linux-amd64.tar.gz
 
-mv linux-amd64/helm /usr/local/bin/helm
+sudo mv linux-amd64/helm /usr/local/bin/helm
 
 chmod 777 /usr/local/bin/helm  # give permissions
 
