@@ -1,4 +1,4 @@
-pipeline{
+pipeline {
     agent any
     parameters {
         string(name: 'ACTION', defaultValue: 'apply', description: 'Terraform action: apply or destroy')    
@@ -35,7 +35,7 @@ pipeline{
                    }
              }
         }
-         stage('Terraform apply/destroy'){
+        stage('Terraform apply/destroy'){
               steps{
                   dir('eks-terrafom') {
                        sh "terraform ${params.ACTION} -auto-approve"
