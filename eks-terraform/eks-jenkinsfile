@@ -3,7 +3,7 @@ pipeline{
     stages {
         stage('Checkout from Git'){
             steps{
-                <githuburl>
+                echo 'git checkout'
             }
         }
         stage('Terraform version'){
