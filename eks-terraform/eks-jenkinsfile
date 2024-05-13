@@ -13,28 +13,28 @@ pipeline{
         }
         stage('Terraform init'){
              steps{
-                 dir('EKS_TERRAFORM') {
+                 dir('eks-terrafom') {
                       sh 'terraform init --reconfigure'
                    }
              }
         }
         stage('Terraform validate'){
              steps{
-                 dir('EKS_TERRAFORM') {
+                 dir('eks-terrafom') {
                       sh 'terraform validate'
                    }
              }
         }
         stage('Terraform plan'){
              steps{
-                 dir('EKS_TERRAFORM') {
+                 dir('eks-terrafom') {
                       sh 'terraform plan'
                    }
              }
         }
         // stage('Terraform apply/destroy'){
         //      steps{
-        //          dir('EKS_TERRAFORM') {
+        //          dir('eks-terrafom') {
         //               sh 'terraform ${action} --auto-approve'
         //           }
         //      }
