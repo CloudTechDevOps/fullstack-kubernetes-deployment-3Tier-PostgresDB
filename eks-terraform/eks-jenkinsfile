@@ -1,5 +1,8 @@
 pipeline{
     agent any
+    parameters {
+        string(name: 'ACTION', defaultValue: 'apply', description: 'Terraform action: apply or destroy')    
+    }
     stages {
         stage('Checkout from Git'){
             steps{
@@ -32,12 +35,12 @@ pipeline{
                    }
              }
         }
-        // stage('Terraform apply/destroy'){
-        //      steps{
-        //          dir('eks-terrafom') {
-        //               sh 'terraform ${action} --auto-approve'
-        //           }
-        //      }
-        // }
+         stage('Terraform apply/destroy'){
+              steps{
+                  dir('eks-terrafom') {
+                       sh "terraform ${params.ACTION} -auto-approve"
+                   }
+              }
+         }
     }
 }
