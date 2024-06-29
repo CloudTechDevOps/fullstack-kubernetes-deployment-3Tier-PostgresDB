@@ -54,4 +54,4 @@ spec:
   selector:
     app: database
   ports:
-  - port: 5432
+  - port: 5430
